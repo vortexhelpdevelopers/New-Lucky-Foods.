@@ -4,680 +4,739 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>New Lucky Foods | Lahore</title>
-
-<meta name="description"
-content="New Lucky Foods Lahore — Pizza, Shawarma, Chicken, Wraps, Fries and more. Order through WhatsApp.">
+<title>New Lucky Foods | Daroghawala Lahore</title>
+<meta name="description" content="New Lucky Foods - Daroghawala Lahore. Pizza, burgers, shawarma, wraps, sandwiches, fries and more.">
 
 <style>
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-:root{
-  --red:#e3262e;
-  --red-dark:#a70f16;
-  --gold:#ffca55;
-  --black:#080808;
-  --dark:#101010;
-  --card:#171717;
-  --white:#fff;
-  --muted:#a8a8a8;
-  --green:#25d366;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--black);
-  color:white;
-  line-height:1.6;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#080b0d;
+    color:#fff;
+    line-height:1.6;
+}
+
+:root{
+    --red:#e21b23;
+    --red2:#ff3b30;
+    --green:#19a974;
+    --dark:#080b0d;
+    --card:#111619;
+    --border:#252b2e;
+    --muted:#aeb4b7;
+    --gold:#f4b942;
 }
 
 a{
-  text-decoration:none;
-  color:inherit;
+    text-decoration:none;
+    color:inherit;
 }
 
 button{
-  font-family:inherit;
+    font-family:inherit;
+}
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
 }
 
 /* NAVBAR */
 
 .navbar{
-  position:sticky;
-  top:0;
-  z-index:999;
-  background:rgba(7,7,7,.94);
-  backdrop-filter:blur(16px);
-  border-bottom:1px solid rgba(255,255,255,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(8,11,13,.94);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--border);
 }
 
 .nav-inner{
-  max-width:1180px;
-  margin:auto;
-  padding:16px 22px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+    min-height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
 .logo{
-  font-size:22px;
-  font-weight:900;
-  letter-spacing:.5px;
+    font-size:22px;
+    font-weight:900;
+    letter-spacing:-.5px;
 }
 
 .logo span{
-  display:block;
-  color:var(--red);
-  font-size:9px;
-  letter-spacing:3px;
-  margin-top:-2px;
+    color:var(--red);
 }
 
 .nav-links{
-  display:flex;
-  align-items:center;
-  gap:24px;
-  color:#ddd;
-  font-size:14px;
+    display:flex;
+    gap:28px;
+    align-items:center;
+}
+
+.nav-links a{
+    color:#ddd;
+    font-size:14px;
+    font-weight:700;
+    transition:.2s;
 }
 
 .nav-links a:hover{
-  color:var(--red);
+    color:#fff;
 }
 
-.nav-order{
-  background:var(--red);
-  padding:10px 17px;
-  border-radius:7px;
-  font-weight:bold;
-  color:white!important;
+.nav-btn{
+    background:var(--red);
+    padding:11px 18px;
+    border-radius:10px;
+    font-weight:800;
+}
+
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
 }
 
 /* HERO */
 
 .hero{
-  min-height:700px;
-  position:relative;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 80% 30%,rgba(226,27,35,.25),transparent 35%),
+        radial-gradient(circle at 20% 80%,rgba(25,169,116,.12),transparent 35%),
+        #080b0d;
+}
 
-  background:
-  linear-gradient(
-    90deg,
-    rgba(0,0,0,.97) 0%,
-    rgba(0,0,0,.82) 45%,
-    rgba(0,0,0,.45) 100%
-  ),
-  url("https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1800&q=85")
-  center/cover;
+.hero:before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(90deg,#080b0d 0%,rgba(8,11,13,.92) 45%,rgba(8,11,13,.45) 100%);
 }
 
 .hero-content{
-  max-width:1180px;
-  width:100%;
-  margin:auto;
-  padding:80px 22px;
+    position:relative;
+    z-index:2;
+    max-width:720px;
 }
 
 .badge{
-  display:inline-block;
-  color:var(--gold);
-  border:1px solid rgba(255,202,85,.4);
-  background:rgba(255,202,85,.08);
-  padding:8px 14px;
-  border-radius:30px;
-  font-size:11px;
-  font-weight:bold;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  margin-bottom:22px;
+    display:inline-flex;
+    padding:8px 13px;
+    border:1px solid rgba(226,27,35,.5);
+    background:rgba(226,27,35,.1);
+    border-radius:30px;
+    color:#ff7777;
+    font-size:13px;
+    font-weight:800;
+    margin-bottom:22px;
 }
 
 .hero h1{
-  max-width:750px;
-  font-size:clamp(50px,7vw,88px);
-  line-height:.98;
-  margin-bottom:24px;
-  font-weight:900;
-  letter-spacing:-3px;
+    font-size:clamp(42px,7vw,76px);
+    line-height:1;
+    font-weight:950;
+    letter-spacing:-3px;
 }
 
 .hero h1 span{
-  color:var(--red);
+    color:var(--red);
 }
 
 .hero p{
-  max-width:620px;
-  color:#d0d0d0;
-  font-size:18px;
-  margin-bottom:30px;
+    color:#c4c8ca;
+    font-size:18px;
+    max-width:650px;
+    margin:25px 0;
 }
 
-.buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
+.hero-buttons{
+    display:flex;
+    gap:13px;
+    flex-wrap:wrap;
 }
 
 .btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:14px 21px;
-  border-radius:7px;
-  font-size:14px;
-  font-weight:bold;
-  transition:.25s;
+    padding:14px 22px;
+    border-radius:12px;
+    font-weight:900;
+    border:1px solid transparent;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
 }
 
 .btn-red{
-  background:var(--red);
-  color:white;
+    background:var(--red);
+    color:white;
 }
 
 .btn-red:hover{
-  background:#ff343d;
-  transform:translateY(-2px);
+    background:var(--red2);
 }
 
 .btn-outline{
-  border:1px solid rgba(255,255,255,.25);
-  background:rgba(255,255,255,.04);
+    border-color:#3a4144;
+    background:#111619;
+    color:white;
 }
 
-.btn-outline:hover{
-  border-color:var(--red);
-  color:#ff555c;
+.hero-info{
+    margin-top:34px;
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
 }
 
-/* INFO */
-
-.info{
-  max-width:1120px;
-  margin:-45px auto 0;
-  position:relative;
-  z-index:5;
-  padding:0 20px;
+.info-item{
+    color:#bfc4c6;
+    font-size:14px;
 }
 
-.info-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  background:#151515;
-  border:1px solid rgba(255,255,255,.09);
-  border-radius:14px;
-  overflow:hidden;
+.info-item strong{
+    display:block;
+    color:#fff;
+    font-size:15px;
 }
 
-.info-box{
-  padding:24px;
-  text-align:center;
-  border-right:1px solid rgba(255,255,255,.08);
+/* SECTION */
+
+section{
+    padding:85px 0;
 }
 
-.info-box:last-child{
-  border-right:none;
+.section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:20px;
+    margin-bottom:35px;
 }
 
-.info-box strong{
-  display:block;
-  color:var(--gold);
-  font-size:13px;
-  margin-bottom:4px;
+.section-label{
+    color:var(--red);
+    font-size:13px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:2px;
 }
 
-.info-box span{
-  color:#aaa;
-  font-size:12px;
+.section-title{
+    font-size:clamp(30px,5vw,48px);
+    line-height:1.05;
+    margin-top:8px;
 }
 
-/* GENERAL */
-
-.section{
-  max-width:1180px;
-  margin:auto;
-  padding:100px 22px;
+.section-text{
+    color:var(--muted);
+    max-width:620px;
 }
 
-.heading{
-  text-align:center;
-  margin-bottom:45px;
-}
-
-.heading small{
-  color:var(--red);
-  text-transform:uppercase;
-  letter-spacing:3px;
-  font-size:11px;
-  font-weight:bold;
-}
-
-.heading h2{
-  font-size:clamp(36px,5vw,56px);
-  margin:8px 0 12px;
-}
-
-.heading p{
-  max-width:650px;
-  margin:auto;
-  color:#999;
-  font-size:15px;
-}
-
-/* ABOUT */
-
-.about{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:60px;
-  align-items:center;
-}
-
-.about-image{
-  min-height:450px;
-  border-radius:16px;
-
-  background:
-  linear-gradient(180deg,transparent,rgba(0,0,0,.75)),
-  url("https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=1000&q=85")
-  center/cover;
-}
-
-.about-content h2{
-  font-size:38px;
-  margin-bottom:18px;
-}
-
-.about-content p{
-  color:#aaa;
-  margin-bottom:16px;
-}
+/* FEATURE CARDS */
 
 .features{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-  margin-top:25px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
 }
 
 .feature{
-  background:#151515;
-  border:1px solid rgba(255,255,255,.07);
-  border-radius:9px;
-  padding:14px;
-  font-size:13px;
-  color:#ddd;
+    background:linear-gradient(145deg,#121719,#0d1113);
+    border:1px solid var(--border);
+    padding:28px;
+    border-radius:18px;
 }
 
-.feature span{
-  color:var(--red);
-  margin-right:6px;
+.feature-icon{
+    width:50px;
+    height:50px;
+    display:grid;
+    place-items:center;
+    background:rgba(226,27,35,.12);
+    border:1px solid rgba(226,27,35,.25);
+    border-radius:14px;
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.feature h3{
+    margin-bottom:8px;
+}
+
+.feature p{
+    color:var(--muted);
+    font-size:14px;
 }
 
 /* MENU */
 
 .menu-section{
-  background:#0e0e0e;
-  border-top:1px solid rgba(255,255,255,.06);
-  border-bottom:1px solid rgba(255,255,255,.06);
+    background:#0b0e10;
 }
 
-.filters{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:9px;
-  margin-bottom:35px;
+.search-box{
+    width:100%;
+    background:#111619;
+    border:1px solid var(--border);
+    padding:16px 18px;
+    border-radius:13px;
+    color:white;
+    outline:none;
+    font-size:15px;
+    margin-bottom:20px;
 }
 
-.filter{
-  background:#181818;
-  color:#ccc;
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:30px;
-  padding:10px 17px;
-  cursor:pointer;
+.search-box:focus{
+    border-color:var(--red);
 }
 
-.filter:hover,
-.filter.active{
-  background:var(--red);
-  color:white;
-  border-color:var(--red);
+.categories{
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    padding-bottom:8px;
+    margin-bottom:28px;
+}
+
+.categories::-webkit-scrollbar{
+    height:4px;
+}
+
+.category{
+    flex:none;
+    padding:10px 17px;
+    background:#14191b;
+    border:1px solid var(--border);
+    color:#bfc3c5;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:800;
+}
+
+.category.active,
+.category:hover{
+    background:var(--red);
+    color:#fff;
+    border-color:var(--red);
 }
 
 .menu-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:17px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
 }
 
 .menu-card{
-  background:linear-gradient(145deg,#191919,#111);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:13px;
-  padding:22px;
-  transition:.25s;
+    background:#111619;
+    border:1px solid var(--border);
+    border-radius:17px;
+    padding:20px;
+    transition:.25s;
+    display:flex;
+    flex-direction:column;
 }
 
 .menu-card:hover{
-  transform:translateY(-4px);
-  border-color:rgba(227,38,46,.45);
+    transform:translateY(-4px);
+    border-color:#4a3032;
+}
+
+.menu-top{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
 }
 
 .menu-icon{
-  width:45px;
-  height:45px;
-  display:grid;
-  place-items:center;
-  border-radius:10px;
-  background:rgba(227,38,46,.12);
-  font-size:22px;
-  margin-bottom:15px;
+    width:48px;
+    height:48px;
+    border-radius:13px;
+    background:#1a2022;
+    display:grid;
+    place-items:center;
+    font-size:23px;
 }
 
 .menu-card h3{
-  font-size:21px;
-  margin-bottom:7px;
+    font-size:17px;
+    margin:13px 0 5px;
 }
 
-.menu-card p{
-  color:#999;
-  font-size:13px;
-  margin-bottom:18px;
+.menu-desc{
+    color:#8f979a;
+    font-size:13px;
+    min-height:38px;
 }
 
-.menu-bottom{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:10px;
+.price{
+    margin-top:14px;
+    font-size:19px;
+    font-weight:950;
+    color:#fff;
 }
 
-.ask{
-  color:var(--gold);
-  font-size:12px;
-  font-weight:bold;
+.old{
+    color:#666e71;
+    text-decoration:line-through;
+    font-size:13px;
+    margin-left:5px;
+    font-weight:500;
 }
 
-.order-small{
-  background:rgba(227,38,46,.12);
-  border:1px solid rgba(227,38,46,.4);
-  padding:7px 11px;
-  border-radius:6px;
-  font-size:10px;
-  font-weight:bold;
+.order-btn{
+    margin-top:16px;
+    padding:11px;
+    border-radius:10px;
+    background:#0e6046;
+    color:white;
+    text-align:center;
+    font-weight:900;
+    font-size:13px;
+    transition:.2s;
 }
 
-.order-small:hover{
-  background:var(--red);
+.order-btn:hover{
+    background:#19a974;
 }
 
-/* DEALS */
+/* SPECIAL */
 
-.deals{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
+.special{
+    background:
+        radial-gradient(circle at 90% 20%,rgba(226,27,35,.18),transparent 30%),
+        #090c0e;
 }
 
-.deal{
-  background:
-  linear-gradient(135deg,rgba(227,38,46,.22),rgba(227,38,46,.02)),
-  #151515;
-  border:1px solid rgba(227,38,46,.28);
-  border-radius:14px;
-  padding:28px;
+.special-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:25px;
 }
 
-.deal-icon{
-  font-size:35px;
-  margin-bottom:12px;
+.special-main{
+    min-height:380px;
+    border-radius:24px;
+    padding:38px;
+    display:flex;
+    flex-direction:column;
+    justify-content:end;
+    background:
+        linear-gradient(0deg,rgba(0,0,0,.9),rgba(0,0,0,.1)),
+        linear-gradient(135deg,#471317,#17191a);
+    border:1px solid #4a2629;
 }
 
-.deal h3{
-  font-size:24px;
-  margin-bottom:8px;
+.special-main h3{
+    font-size:38px;
+    margin-bottom:10px;
 }
 
-.deal p{
-  color:#999;
-  font-size:13px;
+.special-main p{
+    color:#ccc;
+    max-width:500px;
 }
 
-/* ORDER CTA */
-
-.cta{
-  max-width:1120px;
-  margin:auto;
-  padding:65px 25px;
-  border-radius:18px;
-  text-align:center;
-
-  background:
-  linear-gradient(135deg,rgba(227,38,46,.23),rgba(227,38,46,.03)),
-  #151515;
-
-  border:1px solid rgba(227,38,46,.3);
+.special-list{
+    display:grid;
+    gap:15px;
 }
 
-.cta h2{
-  font-size:42px;
-  margin-bottom:10px;
+.special-item{
+    background:#111619;
+    border:1px solid var(--border);
+    border-radius:17px;
+    padding:22px;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    align-items:center;
 }
 
-.cta p{
-  color:#999;
-  max-width:580px;
-  margin:0 auto 25px;
+.special-item h4{
+    font-size:18px;
+}
+
+.special-item p{
+    color:#8f979a;
+    font-size:13px;
+}
+
+.special-price{
+    color:var(--gold);
+    font-size:19px;
+    font-weight:900;
+    white-space:nowrap;
+}
+
+/* ABOUT */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-box{
+    background:#111619;
+    border:1px solid var(--border);
+    border-radius:22px;
+    padding:35px;
+}
+
+.about-box h3{
+    font-size:28px;
+    margin-bottom:14px;
+}
+
+.about-box p{
+    color:var(--muted);
+    margin-bottom:15px;
+}
+
+.about-points{
+    display:grid;
+    gap:12px;
+    margin-top:25px;
+}
+
+.point{
+    display:flex;
+    gap:10px;
+    color:#ddd;
+    font-weight:700;
 }
 
 /* CONTACT */
 
 .contact{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
+    background:#0b0e10;
 }
 
-.contact-card,
-.map-card{
-  background:#151515;
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:14px;
-  padding:28px;
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
 }
 
-.contact-card h3,
-.map-card h3{
-  font-size:27px;
-  margin-bottom:20px;
+.contact-card{
+    background:#111619;
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:30px;
 }
 
 .contact-row{
-  display:flex;
-  gap:14px;
-  padding:16px 0;
-  border-bottom:1px solid rgba(255,255,255,.07);
-}
-
-.contact-row:last-child{
-  border-bottom:none;
+    display:flex;
+    gap:15px;
+    margin-bottom:24px;
 }
 
 .contact-icon{
-  width:42px;
-  height:42px;
-  flex-shrink:0;
-  display:grid;
-  place-items:center;
-  background:rgba(227,38,46,.13);
-  border-radius:8px;
+    width:46px;
+    height:46px;
+    flex:none;
+    border-radius:12px;
+    background:#1a2022;
+    display:grid;
+    place-items:center;
+    font-size:20px;
+}
+
+.contact-row small{
+    display:block;
+    color:#737b7e;
+    margin-bottom:3px;
 }
 
 .contact-row strong{
-  display:block;
-  color:var(--gold);
-  font-size:11px;
+    font-size:15px;
 }
 
-.contact-row span,
-.contact-row a{
-  color:#bbb;
-  font-size:14px;
+.map-box{
+    min-height:330px;
+    border-radius:20px;
+    border:1px solid var(--border);
+    background:
+        radial-gradient(circle at 50% 40%,rgba(226,27,35,.22),transparent 30%),
+        #101517;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px;
 }
 
-.map-card{
-  min-height:100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
+.map-box h3{
+    font-size:26px;
 }
 
-.map-pin{
-  font-size:50px;
-  margin-bottom:12px;
+.map-box p{
+    color:#9ca3a6;
+    margin:10px 0 20px;
 }
 
-.map-card p{
-  color:#999;
-  max-width:400px;
-  margin:0 auto 20px;
+/* CTA */
+
+.cta{
+    padding:75px 0;
+}
+
+.cta-box{
+    background:linear-gradient(135deg,#3b1014,#15191b);
+    border:1px solid #572428;
+    border-radius:25px;
+    padding:55px 35px;
+    text-align:center;
+}
+
+.cta-box h2{
+    font-size:clamp(30px,5vw,48px);
+    line-height:1.05;
+}
+
+.cta-box p{
+    color:#bbb;
+    margin:16px auto 25px;
+    max-width:600px;
 }
 
 /* FOOTER */
 
 footer{
-  background:#060606;
-  border-top:1px solid rgba(255,255,255,.07);
-  text-align:center;
-  padding:38px 20px;
+    border-top:1px solid var(--border);
+    padding:35px 0;
+    background:#07090a;
 }
 
-.footer-logo{
-  font-size:23px;
-  font-weight:900;
+.footer-inner{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
-.footer-logo span{
-  color:var(--red);
+.footer-inner p{
+    color:#747c7f;
+    font-size:13px;
 }
 
-footer p{
-  color:#666;
-  font-size:12px;
-  margin-top:7px;
-}
-
-/* WHATSAPP */
+/* FLOATING WHATSAPP */
 
 .whatsapp{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  z-index:999;
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  background:var(--green);
-  display:grid;
-  place-items:center;
-  font-size:27px;
-  box-shadow:0 8px 25px rgba(0,0,0,.45);
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#20c76a;
+    display:grid;
+    place-items:center;
+    font-size:28px;
+    z-index:999;
+    box-shadow:0 10px 30px rgba(0,0,0,.5);
 }
 
-/* MOBILE */
+/* RESPONSIVE */
 
 @media(max-width:900px){
 
-  .nav-links{
-    display:none;
-  }
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:72px;
+        left:0;
+        right:0;
+        background:#0b0e10;
+        border-bottom:1px solid var(--border);
+        padding:20px;
+        flex-direction:column;
+        align-items:flex-start;
+    }
 
-  .about,
-  .contact{
-    grid-template-columns:1fr;
-  }
+    .nav-links.show{
+        display:flex;
+    }
 
-  .menu-grid{
-    grid-template-columns:1fr 1fr;
-  }
+    .menu-toggle{
+        display:block;
+    }
 
-  .deals{
-    grid-template-columns:1fr;
-  }
+    .features,
+    .menu-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .special-grid,
+    .about,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
 }
 
 @media(max-width:600px){
 
-  .hero{
-    min-height:630px;
-  }
+    section{
+        padding:65px 0;
+    }
 
-  .hero h1{
-    font-size:52px;
-  }
+    .hero{
+        min-height:620px;
+    }
 
-  .hero p{
-    font-size:15px;
-  }
+    .hero h1{
+        letter-spacing:-2px;
+    }
 
-  .buttons{
-    flex-direction:column;
-  }
+    .hero p{
+        font-size:16px;
+    }
 
-  .btn{
-    width:100%;
-  }
+    .features,
+    .menu-grid{
+        grid-template-columns:1fr;
+    }
 
-  .info-grid{
-    grid-template-columns:1fr;
-  }
+    .hero-buttons{
+        flex-direction:column;
+    }
 
-  .info-box{
-    border-right:none;
-    border-bottom:1px solid rgba(255,255,255,.08);
-  }
+    .btn{
+        width:100%;
+    }
 
-  .info-box:last-child{
-    border-bottom:none;
-  }
+    .section-head{
+        display:block;
+    }
 
-  .section{
-    padding:72px 18px;
-  }
+    .special-main{
+        min-height:320px;
+        padding:27px;
+    }
 
-  .about-image{
-    min-height:320px;
-  }
+    .special-main h3{
+        font-size:30px;
+    }
 
-  .features{
-    grid-template-columns:1fr;
-  }
-
-  .menu-grid{
-    grid-template-columns:1fr;
-  }
-
-  .cta{
-    margin:0 18px;
-    padding:50px 20px;
-  }
-
-  .cta h2{
-    font-size:32px;
-  }
+    .container{
+        width:90%;
+    }
 }
 </style>
 </head>
@@ -686,174 +745,135 @@ footer p{
 
 <!-- NAVBAR -->
 
-<header class="navbar">
+<nav class="navbar">
+<div class="container nav-inner">
 
-<div class="nav-inner">
+<div class="logo">
+New <span>Lucky</span> Foods
+</div>
 
-<a href="#home" class="logo">
-NEW LUCKY FOODS
-<span>LAHORE • PAKISTAN</span>
-</a>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-<nav class="nav-links">
-
-<a href="#about">About</a>
+<div class="nav-links" id="navLinks">
+<a href="#home">Home</a>
 <a href="#menu">Menu</a>
-<a href="#deals">Specials</a>
+<a href="#about">About</a>
 <a href="#contact">Contact</a>
 
-<a
-class="nav-order"
-href="https://wa.me/923104056602?text=Hello%20New%20Lucky%20Foods%2C%20I%20would%20like%20to%20place%20an%20order."
+<a class="nav-btn"
+href="https://wa.me/923104056602?text=Assalam-o-Alaikum%20New%20Lucky%20Foods%2C%20I%20would%20like%20to%20place%20an%20order."
 target="_blank">
 Order Now
 </a>
-
-</nav>
-
 </div>
 
-</header>
+</div>
+</nav>
 
 
 <!-- HERO -->
 
 <section class="hero" id="home">
+<div class="container">
 
 <div class="hero-content">
 
 <div class="badge">
-🍕 Fast Food • Pizza • Shawarma
+🔥 DAROGHAWALA'S LOCAL FOOD DESTINATION
 </div>
 
 <h1>
-Good Food.
-<span>Good Mood.</span>
+Fresh Food.<br>
+<span>Lucky Taste.</span>
 </h1>
 
 <p>
-From loaded shawarma and chicken wraps to pizza,
-fries and other fast-food favorites — enjoy your
-favorite comfort food at New Lucky Foods.
+From crispy burgers and loaded fries to mouth-watering pizzas,
+shawarmas, wraps and sandwiches — discover the taste of
+New Lucky Foods.
 </p>
 
-<div class="buttons">
+<div class="hero-buttons">
 
-<a
-class="btn btn-red"
-href="https://wa.me/923104056602?text=Hello%20New%20Lucky%20Foods%2C%20I%20would%20like%20to%20place%20an%20order."
+<a class="btn btn-red"
+href="https://wa.me/923104056602?text=Assalam-o-Alaikum%2C%20I%20want%20to%20place%20an%20order."
 target="_blank">
 💬 Order on WhatsApp
 </a>
 
-<a
-class="btn btn-outline"
-href="#menu">
-Explore Menu
+<a class="btn btn-outline" href="#menu">
+🍽️ Explore Menu
 </a>
 
 </div>
 
+<div class="hero-info">
+
+<div class="info-item">
+<strong>📍 Daroghawala</strong>
+Lahore, Pakistan
 </div>
 
+<div class="info-item">
+<strong>🕓 4:00 PM – 3:00 AM</strong>
+Open Daily
+</div>
+
+<div class="info-item">
+<strong>📞 0310-4056602</strong>
+Call / WhatsApp
+</div>
+
+</div>
+
+</div>
+</div>
 </section>
 
 
-<!-- INFO -->
+<!-- FEATURES -->
 
-<div class="info">
+<section>
+<div class="container">
 
-<div class="info-grid">
-
-<div class="info-box">
-
-<strong>📍 LOCATION</strong>
-
-<span>
-Indo Pak Gas Factory, near Gourmet Bakers, Lahore
-</span>
-
+<div class="section-head">
+<div>
+<div class="section-label">Why New Lucky Foods</div>
+<h2 class="section-title">Made for serious food cravings.</h2>
 </div>
-
-<div class="info-box">
-
-<strong>🕓 OPEN DAILY</strong>
-
-<span>
-4:00 PM — 3:00 AM
-</span>
-
 </div>
-
-<div class="info-box">
-
-<strong>📞 WHATSAPP</strong>
-
-<span>
-0310-4056602
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- ABOUT -->
-
-<section class="section" id="about">
-
-<div class="about">
-
-<div class="about-image"></div>
-
-<div class="about-content">
-
-<div class="heading" style="text-align:left;margin-bottom:20px;">
-
-<small>ABOUT US</small>
-
-<h2>Fresh Food. Fast Service.</h2>
-
-</div>
-
-<p>
-New Lucky Foods brings together popular fast-food
-favorites in one place — from shawarma and chicken
-wraps to pizza, fries and more.
-</p>
-
-<p>
-Whether you're grabbing a quick meal or ordering
-food for friends and family, we're here to serve
-fresh and satisfying food.
-</p>
 
 <div class="features">
 
 <div class="feature">
-<span>✓</span> Fresh Fast Food
+<div class="feature-icon">🍕</div>
+<h3>Loaded Pizzas</h3>
+<p>
+From Lucky Special to Chicken Tikka, Malai Boti and Crown Crust,
+there's a pizza for every craving.
+</p>
 </div>
 
 <div class="feature">
-<span>✓</span> Shawarma & Wraps
+<div class="feature-icon">🌯</div>
+<h3>Shawarma & Wraps</h3>
+<p>
+Enjoy chicken shawarma, zinger shawarma, grilled wraps,
+malai boti wraps and more.
+</p>
 </div>
 
 <div class="feature">
-<span>✓</span> Pizza
-</div>
-
-<div class="feature">
-<span>✓</span> Delivery Available
-</div>
-
-</div>
-
+<div class="feature-icon">🍔</div>
+<h3>Burgers & Fast Food</h3>
+<p>
+Shami, Zinger, Chicken Boti, Chicken Petti and other
+freshly prepared fast-food favourites.
+</p>
 </div>
 
 </div>
-
+</div>
 </section>
 
 
@@ -861,546 +881,661 @@ fresh and satisfying food.
 
 <section class="menu-section" id="menu">
 
-<div class="section">
+<div class="container">
 
-<div class="heading">
-
-<small>Our Food</small>
-
-<h2>Explore Our Menu</h2>
-
-<p>
-Browse some of the food categories available at
-New Lucky Foods. For the latest prices and
-availability, contact us directly on WhatsApp.
-</p>
-
+<div class="section-head">
+<div>
+<div class="section-label">Our Menu</div>
+<h2 class="section-title">Explore the menu.</h2>
 </div>
 
+<p class="section-text">
+Browse our complete selection and order your favourites directly on WhatsApp.
+</p>
+</div>
 
-<div class="filters">
+<input
+type="text"
+id="search"
+class="search-box"
+placeholder="🔎 Search burgers, pizza, shawarma, fries..."
+onkeyup="searchMenu()"
+>
 
-<button class="filter active"
-onclick="filterMenu('all',this)">
+<div class="categories">
+
+<button class="category active" onclick="filterMenu('all',this)">
 All
 </button>
 
-<button class="filter"
-onclick="filterMenu('shawarma',this)">
-Shawarma
+<button class="category" onclick="filterMenu('burger',this)">
+🍔 Burgers
 </button>
 
-<button class="filter"
-onclick="filterMenu('chicken',this)">
-Chicken
+<button class="category" onclick="filterMenu('pizza',this)">
+🍕 Pizza
 </button>
 
-<button class="filter"
-onclick="filterMenu('wraps',this)">
-Wraps
+<button class="category" onclick="filterMenu('shawarma',this)">
+🌯 Shawarma
 </button>
 
-<button class="filter"
-onclick="filterMenu('pizza',this)">
-Pizza
+<button class="category" onclick="filterMenu('wrap',this)">
+🌯 Wraps
 </button>
 
-<button class="filter"
-onclick="filterMenu('sides',this)">
-Sides
+<button class="category" onclick="filterMenu('roll',this)">
+Rolls
+</button>
+
+<button class="category" onclick="filterMenu('sandwich',this)">
+🥪 Sandwiches
+</button>
+
+<button class="category" onclick="filterMenu('fries',this)">
+🍟 Fries
+</button>
+
+<button class="category" onclick="filterMenu('pasta',this)">
+🍝 Pasta
+</button>
+
+<button class="category" onclick="filterMenu('special',this)">
+⭐ Specials
 </button>
 
 </div>
 
 
-<div class="menu-grid">
+<div class="menu-grid" id="menuGrid">
 
+<!-- BURGERS -->
 
-<!-- SHAWARMA -->
-
-<div class="menu-card" data-category="shawarma">
-
-<div class="menu-icon">🌯</div>
-
-<h3>Chicken Shawarma</h3>
-
-<p>
-One of the popular choices mentioned by customers.
-</p>
-
-<div class="menu-bottom">
-
-<span class="ask">
-Price on WhatsApp
-</span>
-
-<a
-class="order-small"
-href="https://wa.me/923104056602?text=Hello%2C%20I%20would%20like%20to%20order%20Chicken%20Shawarma."
-target="_blank">
-ORDER
-</a>
-
+<div class="menu-card" data-category="burger" data-name="Shami Burger Long">
+<div class="menu-top"><div class="menu-icon">🍔</div></div>
+<h3>Shami Burger (Long)</h3>
+<div class="menu-desc">Long bun shami burger.</div>
+<div class="price">Rs. 170 <span class="old">Rs. 180</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Shami%20Burger%20(Long)." target="_blank">Order on WhatsApp</a>
 </div>
 
+<div class="menu-card" data-category="burger" data-name="Anda Lapita Burger">
+<div class="menu-top"><div class="menu-icon">🍔</div></div>
+<h3>Anda Lapita Burger</h3>
+<div class="menu-desc">Special egg burger.</div>
+<div class="price">Rs. 220 <span class="old">Rs. 250</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Anda%20Lapita%20Burger." target="_blank">Order on WhatsApp</a>
 </div>
 
-
-<!-- WRAP -->
-
-<div class="menu-card" data-category="wraps chicken">
-
-<div class="menu-icon">🌯</div>
-
-<h3>Chicken Wrap</h3>
-
-<p>
-Tender chicken served in a convenient wrap.
-</p>
-
-<div class="menu-bottom">
-
-<span class="ask">
-Price on WhatsApp
-</span>
-
-<a
-class="order-small"
-href="https://wa.me/923104056602?text=Hello%2C%20I%20would%20like%20to%20order%20a%20Chicken%20Wrap."
-target="_blank">
-ORDER
-</a>
-
+<div class="menu-card" data-category="burger" data-name="Shami Burger Gol">
+<div class="menu-top"><div class="menu-icon">🍔</div></div>
+<h3>Shami Burger (Gol)</h3>
+<div class="menu-desc">Classic round shami burger.</div>
+<div class="price">Rs. 180 <span class="old">Rs. 200</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Shami%20Burger%20(Gol)." target="_blank">Order on WhatsApp</a>
 </div>
 
+<div class="menu-card" data-category="burger" data-name="Lucky Chicken Zinger Burger">
+<div class="menu-top"><div class="menu-icon">🍔</div></div>
+<h3>Lucky Chicken Zinger Burger</h3>
+<div class="menu-desc">Crispy chicken zinger burger.</div>
+<div class="price">Rs. 330 <span class="old">Rs. 380</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Lucky%20Chicken%20Zinger%20Burger." target="_blank">Order on WhatsApp</a>
 </div>
 
-
-<!-- CHICKEN -->
-
-<div class="menu-card" data-category="chicken">
-
-<div class="menu-icon">🍗</div>
-
-<h3>Chicken</h3>
-
-<p>
-A selection of chicken-based fast-food favorites.
-</p>
-
-<div class="menu-bottom">
-
-<span class="ask">
-Price on WhatsApp
-</span>
-
-<a
-class="order-small"
-href="https://wa.me/923104056602?text=Hello%2C%20please%20share%20your%20current%20Chicken%20menu."
-target="_blank">
-VIEW
-</a>
-
+<div class="menu-card" data-category="burger" data-name="Chicken Boti Burger">
+<div class="menu-top"><div class="menu-icon">🍔</div></div>
+<h3>Chicken Boti Burger</h3>
+<div class="menu-desc">Chicken boti burger.</div>
+<div class="price">Rs. 400 <span class="old">Rs. 450</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Chicken%20Boti%20Burger." target="_blank">Order on WhatsApp</a>
 </div>
 
+<div class="menu-card" data-category="burger" data-name="Chicken Petti Burger">
+<div class="menu-top"><div class="menu-icon">🍔</div></div>
+<h3>Chicken Petti Burger</h3>
+<div class="menu-desc">Classic chicken patty burger.</div>
+<div class="price">Rs. 250 <span class="old">Rs. 300</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Chicken%20Petti%20Burger." target="_blank">Order on WhatsApp</a>
 </div>
 
-
-<!-- FRIES -->
-
-<div class="menu-card" data-category="sides">
-
-<div class="menu-icon">🍟</div>
-
-<h3>French Fries</h3>
-
-<p>
-Crispy fries — perfect with your meal.
-</p>
-
-<div class="menu-bottom">
-
-<span class="ask">
-Price on WhatsApp
-</span>
-
-<a
-class="order-small"
-href="https://wa.me/923104056602?text=Hello%2C%20I%20would%20like%20to%20order%20French%20Fries."
-target="_blank">
-ORDER
-</a>
-
+<div class="menu-card" data-category="burger" data-name="Zinger Burger">
+<div class="menu-top"><div class="menu-icon">🍔</div></div>
+<h3>Zinger Burger</h3>
+<div class="menu-desc">Crispy zinger chicken burger.</div>
+<div class="price">Rs. 330 <span class="old">Rs. 350</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Zinger%20Burger." target="_blank">Order on WhatsApp</a>
 </div>
 
+<div class="menu-card" data-category="burger" data-name="Pizza Burger">
+<div class="menu-top"><div class="menu-icon">🍔</div></div>
+<h3>Pizza Burger</h3>
+<div class="menu-desc">Pizza-inspired loaded burger.</div>
+<div class="price">Rs. 500 <span class="old">Rs. 530</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Pizza%20Burger." target="_blank">Order on WhatsApp</a>
 </div>
 
 
 <!-- PIZZA -->
 
-<div class="menu-card" data-category="pizza">
-
-<div class="menu-icon">🍕</div>
-
-<h3>Pizza</h3>
-
-<p>
-Pizza options available at New Lucky Foods.
-</p>
-
-<div class="menu-bottom">
-
-<span class="ask">
-Price on WhatsApp
-</span>
-
-<a
-class="order-small"
-href="https://wa.me/923104056602?text=Hello%2C%20please%20share%20your%20current%20Pizza%20menu%20and%20prices."
-target="_blank">
-VIEW
-</a>
-
+<div class="menu-card" data-category="pizza" data-name="Lucky Special Pizza">
+<div class="menu-top"><div class="menu-icon">🍕</div></div>
+<h3>Lucky Special Pizza</h3>
+<div class="menu-desc">Small Rs.700 | Medium Rs.1200</div>
+<div class="price">From Rs. 700 <span class="old">Rs. 800</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Lucky%20Special%20Pizza." target="_blank">Order on WhatsApp</a>
 </div>
 
+<div class="menu-card" data-category="pizza" data-name="Chicken Malai Boti Pizza">
+<div class="menu-top"><div class="menu-icon">🍕</div></div>
+<h3>Chicken Malai Boti Pizza</h3>
+<div class="menu-desc">Small Rs.700 | Medium Rs.1200</div>
+<div class="price">From Rs. 700 <span class="old">Rs. 800</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Chicken%20Malai%20Boti%20Pizza." target="_blank">Order on WhatsApp</a>
 </div>
 
-
-<!-- CHICKEN WRAP -->
-
-<div class="menu-card" data-category="wraps chicken">
-
-<div class="menu-icon">🌯</div>
-
-<h3>Chicken Roll / Wrap</h3>
-
-<p>
-Chicken wrapped with flavorful fillings.
-</p>
-
-<div class="menu-bottom">
-
-<span class="ask">
-Price on WhatsApp
-</span>
-
-<a
-class="order-small"
-href="https://wa.me/923104056602?text=Hello%2C%20please%20share%20your%20Chicken%20Wrap%20options."
-target="_blank">
-VIEW
-</a>
-
+<div class="menu-card" data-category="pizza" data-name="Crown Crust Pizza">
+<div class="menu-top"><div class="menu-icon">🍕</div></div>
+<h3>Crown Crust Pizza</h3>
+<div class="menu-desc">Small Rs.700 | Medium Rs.1200</div>
+<div class="price">From Rs. 700 <span class="old">Rs. 800</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Crown%20Crust%20Pizza." target="_blank">Order on WhatsApp</a>
 </div>
 
+<div class="menu-card" data-category="pizza" data-name="Royal Kababish Pizza">
+<div class="menu-top"><div class="menu-icon">🍕</div></div>
+<h3>Royal Kababish Pizza</h3>
+<div class="menu-desc">Small Rs.700 | Medium Rs.1200</div>
+<div class="price">From Rs. 700 <span class="old">Rs. 800</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Royal%20Kababish%20Pizza." target="_blank">Order on WhatsApp</a>
+</div>
+
+<div class="menu-card" data-category="pizza" data-name="Chicken Tikka Pizza">
+<div class="menu-top"><div class="menu-icon">🍕</div></div>
+<h3>Chicken Tikka Pizza</h3>
+<div class="menu-desc">S 550 / M 1000 / L 1400</div>
+<div class="price">Rs. 550</div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Chicken%20Tikka%20Pizza." target="_blank">Order on WhatsApp</a>
 </div>
 
 
-<!-- SHAWARMA PLATTER -->
+<!-- SHAWARMA -->
 
-<div class="menu-card" data-category="shawarma">
-
-<div class="menu-icon">🥙</div>
-
-<h3>Shawarma Meal</h3>
-
-<p>
-Ask about available shawarma meal combinations.
-</p>
-
-<div class="menu-bottom">
-
-<span class="ask">
-Price on WhatsApp
-</span>
-
-<a
-class="order-small"
-href="https://wa.me/923104056602?text=Hello%2C%20please%20share%20your%20Shawarma%20meal%20options."
-target="_blank">
-VIEW
-</a>
-
+<div class="menu-card" data-category="shawarma" data-name="Chicken Shawarma">
+<div class="menu-top"><div class="menu-icon">🌯</div></div>
+<h3>Chicken Shawarma</h3>
+<div class="menu-desc">Classic chicken shawarma.</div>
+<div class="price">Rs. 300 <span class="old">Rs. 350</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Chicken%20Shawarma." target="_blank">Order on WhatsApp</a>
 </div>
 
+<div class="menu-card" data-category="shawarma" data-name="Zinger Shawarma">
+<div class="menu-top"><div class="menu-icon">🌯</div></div>
+<h3>Zinger Shawarma</h3>
+<div class="menu-desc">Crispy zinger shawarma.</div>
+<div class="price">Rs. 300 <span class="old">Rs. 350</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Zinger%20Shawarma." target="_blank">Order on WhatsApp</a>
 </div>
 
-
-<!-- FAST FOOD -->
-
-<div class="menu-card" data-category="sides chicken">
-
-<div class="menu-icon">🍗</div>
-
-<h3>Fast Food Specials</h3>
-
-<p>
-Ask about today's available fast-food specials.
-</p>
-
-<div class="menu-bottom">
-
-<span class="ask">
-Price on WhatsApp
-</span>
-
-<a
-class="order-small"
-href="https://wa.me/923104056602?text=Hello%2C%20please%20share%20today%27s%20Fast%20Food%20specials."
-target="_blank">
-ASK
-</a>
-
+<div class="menu-card" data-category="shawarma" data-name="Lucky Special Chicken Shawarma">
+<div class="menu-top"><div class="menu-icon">🌯</div></div>
+<h3>Lucky Special Chicken Shawarma</h3>
+<div class="menu-desc">Special chicken shawarma.</div>
+<div class="price">Rs. 330 <span class="old">Rs. 350</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Lucky%20Special%20Chicken%20Shawarma." target="_blank">Order on WhatsApp</a>
 </div>
 
+<div class="menu-card" data-category="shawarma" data-name="Grilled Chicken Shawarma">
+<div class="menu-top"><div class="menu-icon">🌯</div></div>
+<h3>Grilled Chicken Shawarma</h3>
+<div class="menu-desc">Fresh grilled chicken shawarma.</div>
+<div class="price">Rs. 300 <span class="old">Rs. 350</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Grilled%20Chicken%20Shawarma." target="_blank">Order on WhatsApp</a>
+</div>
+
+<div class="menu-card" data-category="shawarma" data-name="Chicken Grilled Shawarma">
+<div class="menu-top"><div class="menu-icon">🌯</div></div>
+<h3>Chicken Grilled Shawarma</h3>
+<div class="menu-desc">Grilled chicken with fresh fillings.</div>
+<div class="price">Rs. 450 <span class="old">Rs. 500</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Chicken%20Grilled%20Shawarma." target="_blank">Order on WhatsApp</a>
 </div>
 
 
+<!-- WRAPS -->
+
+<div class="menu-card" data-category="wrap" data-name="Grilled Smoky Wrap">
+<div class="menu-top"><div class="menu-icon">🌯</div></div>
+<h3>Grilled Smoky Wrap</h3>
+<div class="menu-desc">Smoky-flavored grilled chicken wrap.</div>
+<div class="price">Rs. 600 <span class="old">Rs. 700</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Grilled%20Smoky%20Wrap." target="_blank">Order on WhatsApp</a>
 </div>
 
+<div class="menu-card" data-category="wrap" data-name="Jalapeno Wraps">
+<div class="menu-top"><div class="menu-icon">🌯</div></div>
+<h3>Jalapeno Wraps</h3>
+<div class="menu-desc">Spicy jalapenos with grilled chicken.</div>
+<div class="price">Rs. 600 <span class="old">Rs. 700</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Jalapeno%20Wraps." target="_blank">Order on WhatsApp</a>
 </div>
 
-</section>
+<div class="menu-card" data-category="wrap" data-name="Malai Boti Wraps">
+<div class="menu-top"><div class="menu-icon">🌯</div></div>
+<h3>Malai Boti Wraps</h3>
+<div class="menu-desc">Creamy malai boti wrapped fresh.</div>
+<div class="price">Rs. 600 <span class="old">Rs. 700</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Malai%20Boti%20Wraps." target="_blank">Order on WhatsApp</a>
+</div>
+
+<div class="menu-card" data-category="wrap" data-name="Grilled Chicken Wrap">
+<div class="menu-top"><div class="menu-icon">🌯</div></div>
+<h3>Grilled Chicken Wrap</h3>
+<div class="menu-desc">Soft tortilla with tender grilled chicken.</div>
+<div class="price">Rs. 600 <span class="old">Rs. 700</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Grilled%20Chicken%20Wrap." target="_blank">Order on WhatsApp</a>
+</div>
+
+<div class="menu-card" data-category="wrap" data-name="Mushroom Wrap">
+<div class="menu-top"><div class="menu-icon">🌯</div></div>
+<h3>Mushroom Wrap</h3>
+<div class="menu-desc">Grilled chicken mixed with mushrooms.</div>
+<div class="price">Rs. 500</div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Mushroom%20Wrap." target="_blank">Order on WhatsApp</a>
+</div>
+
+
+<!-- ROLLS -->
+
+<div class="menu-card" data-category="roll" data-name="Shapata Roll">
+<div class="menu-top"><div class="menu-icon">🌯</div></div>
+<h3>Shapata Roll</h3>
+<div class="menu-desc">Special Shapata Roll.</div>
+<div class="price">Rs. 600</div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Shapata%20Roll." target="_blank">Order on WhatsApp</a>
+</div>
+
+<div class="menu-card" data-category="roll" data-name="Dhamaka Roll">
+<div class="menu-top"><div class="menu-icon">🌯</div></div>
+<h3>Dhamaka Roll</h3>
+<div class="menu-desc">Loaded special roll.</div>
+<div class="price">Rs. 700 <span class="old">Rs. 800</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Dhamaka%20Roll." target="_blank">Order on WhatsApp</a>
+</div>
+
+<div class="menu-card" data-category="roll" data-name="Zinger Paratha Roll">
+<div class="menu-top"><div class="menu-icon">🌯</div></div>
+<h3>Zinger Paratha Roll</h3>
+<div class="menu-desc">Crispy zinger wrapped in paratha.</div>
+<div class="price">Rs. 320 <span class="old">Rs. 350</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Zinger%20Paratha%20Roll." target="_blank">Order on WhatsApp</a>
+</div>
+
+<div class="menu-card" data-category="roll" data-name="Chicken Grilled Paratha">
+<div class="menu-top"><div class="menu-icon">🌯</div></div>
+<h3>Chicken Grilled Paratha</h3>
+<div class="menu-desc">Grilled chicken paratha.</div>
+<div class="price">Rs. 400 <span class="old">Rs. 450</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Chicken%20Grilled%20Paratha." target="_blank">Order on WhatsApp</a>
+</div>
+
+
+<!-- SANDWICH -->
+
+<div class="menu-card" data-category="sandwich" data-name="Chicken Sandwich">
+<div class="menu-top"><div class="menu-icon">🥪</div></div>
+<h3>Chicken Sandwich</h3>
+<div class="menu-desc">Classic chicken sandwich.</div>
+<div class="price">Rs. 400 <span class="old">Rs. 450</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Chicken%20Sandwich." target="_blank">Order on WhatsApp</a>
+</div>
+
+<div class="menu-card" data-category="sandwich" data-name="Malai Boti Sandwich">
+<div class="menu-top"><div class="menu-icon">🥪</div></div>
+<h3>Malai Boti Sandwich</h3>
+<div class="menu-desc">Creamy malai boti chunks inside.</div>
+<div class="price">Rs. 500</div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Malai%20Boti%20Sandwich." target="_blank">Order on WhatsApp</a>
+</div>
+
+<div class="menu-card" data-category="sandwich" data-name="Mushroom Sandwich">
+<div class="menu-top"><div class="menu-icon">🥪</div></div>
+<h3>Mushroom Sandwich</h3>
+<div class="menu-desc">Chicken and mushrooms.</div>
+<div class="price">Rs. 500</div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Mushroom%20Sandwich." target="_blank">Order on WhatsApp</a>
+</div>
+
+<div class="menu-card" data-category="sandwich" data-name="Grilled Smoky Sandwich">
+<div class="menu-top"><div class="menu-icon">🥪</div></div>
+<h3>Grilled Smoky Sandwich</h3>
+<div class="menu-desc">Smoked grilled chicken layers.</div>
+<div class="price">Rs. 450</div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Grilled%20Smoky%20Sandwich." target="_blank">Order on WhatsApp</a>
+</div>
+
+<div class="menu-card" data-category="sandwich" data-name="Grill Sandwich">
+<div class="menu-top"><div class="menu-icon">🥪</div></div>
+<h3>Grill Sandwich</h3>
+<div class="menu-desc">Classic grilled chicken sandwich.</div>
+<div class="price">Rs. 450</div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Grill%20Sandwich." target="_blank">Order on WhatsApp</a>
+</div>
+
+<div class="menu-card" data-category="sandwich" data-name="Chipotle Sandwich">
+<div class="menu-top"><div class="menu-icon">🥪</div></div>
+<h3>Chipotle Sandwich</h3>
+<div class="menu-desc">Grilled sandwich with chipotle flavour.</div>
+<div class="price">Rs. 500</div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Chipotle%20Sandwich." target="_blank">Order on WhatsApp</a>
+</div>
+
+
+<!-- FRIES -->
+
+<div class="menu-card" data-category="fries" data-name="Plain French Fries">
+<div class="menu-top"><div class="menu-icon">🍟</div></div>
+<h3>Plain French Fries</h3>
+<div class="menu-desc">Half Rs.150 | Full Rs.300</div>
+<div class="price">Rs. 150 <span class="old">Rs. 200</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Plain%20French%20Fries." target="_blank">Order on WhatsApp</a>
+</div>
+
+<div class="menu-card" data-category="fries" data-name="Mayo Fries">
+<div class="menu-top"><div class="menu-icon">🍟</div></div>
+<h3>Mayo Fries</h3>
+<div class="menu-desc">Half Rs.250 | Full Rs.450</div>
+<div class="price">Rs. 250 <span class="old">Rs. 300</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Mayo%20Fries." target="_blank">Order on WhatsApp</a>
+</div>
+
+<div class="menu-card" data-category="fries" data-name="Loaded Fries">
+<div class="menu-top"><div class="menu-icon">🍟</div></div>
+<h3>Loaded Fries</h3>
+<div class="menu-desc">Half Rs.400 | Full Rs.700</div>
+<div class="price">Rs. 400 <span class="old">Rs. 450</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Loaded%20Fries." target="_blank">Order on WhatsApp</a>
+</div>
+
+<div class="menu-card" data-category="fries" data-name="Pizza Fries">
+<div class="menu-top"><div class="menu-icon">🍟</div></div>
+<h3>Pizza Fries</h3>
+<div class="menu-desc">Half Rs.400 | Full Rs.700</div>
+<div class="price">Rs. 400 <span class="old">Rs. 450</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Pizza%20Fries." target="_blank">Order on WhatsApp</a>
+</div>
+
+
+<!-- PASTA -->
+
+<div class="menu-card" data-category="pasta" data-name="Delicious Pasta">
+<div class="menu-top"><div class="menu-icon">🍝</div></div>
+<h3>Delicious Pasta</h3>
+<div class="menu-desc">Multiple pasta flavours available.</div>
+<div class="price">Rs. 900 <span class="old">Rs. 950</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Delicious%20Pasta." target="_blank">Order on WhatsApp</a>
+</div>
+
+<div class="menu-card" data-category="pasta" data-name="Creamy Pasta">
+<div class="menu-top"><div class="menu-icon">🍝</div></div>
+<h3>Creamy Pasta</h3>
+<div class="menu-desc">Half Rs.450 | Full Rs.800</div>
+<div class="price">Rs. 450</div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Creamy%20Pasta." target="_blank">Order on WhatsApp</a>
+</div>
 
 
 <!-- SPECIALS -->
 
-<section class="section" id="deals">
-
-<div class="heading">
-
-<small>Why New Lucky Foods?</small>
-
-<h2>Made For Every Craving</h2>
-
-<p>
-Whether you're craving something quick, something
-crispy or a proper meal — explore the options
-available at New Lucky Foods.
-</p>
-
+<div class="menu-card" data-category="special" data-name="Boneless Zinger Piece">
+<div class="menu-top"><div class="menu-icon">🍗</div></div>
+<h3>Boneless Zinger Piece</h3>
+<div class="menu-desc">Crispy boneless zinger chicken.</div>
+<div class="price">Rs. 300 <span class="old">Rs. 350</span></div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Boneless%20Zinger%20Piece." target="_blank">Order on WhatsApp</a>
 </div>
 
-
-<div class="deals">
-
-<div class="deal">
-
-<div class="deal-icon">🌯</div>
-
-<h3>Shawarma</h3>
-
-<p>
-Chicken shawarma is one of the foods frequently
-mentioned by customers in public reviews.
-</p>
-
-<br>
-
-<a
-class="btn btn-red"
-href="https://wa.me/923104056602?text=Hello%2C%20please%20send%20me%20your%20Shawarma%20menu."
-target="_blank">
-View Shawarma
-</a>
-
-</div>
-
-
-<div class="deal">
-
-<div class="deal-icon">🍕</div>
-
-<h3>Pizza</h3>
-
-<p>
-Pizza is also listed among the restaurant's food
-categories in current public listings.
-</p>
-
-<br>
-
-<a
-class="btn btn-red"
-href="https://wa.me/923104056602?text=Hello%2C%20please%20send%20me%20your%20Pizza%20menu."
-target="_blank">
-View Pizza
-</a>
-
-</div>
-
-
-<div class="deal">
-
-<div class="deal-icon">🍗</div>
-
-<h3>Chicken & Wraps</h3>
-
-<p>
-Enjoy chicken-based options, wraps and other
-fast-food favorites.
-</p>
-
-<br>
-
-<a
-class="btn btn-red"
-href="https://wa.me/923104056602?text=Hello%2C%20please%20send%20me%20your%20Chicken%20and%20Wrap%20menu."
-target="_blank">
-View Options
-</a>
-
+<div class="menu-card" data-category="special" data-name="Grilled Fish">
+<div class="menu-top"><div class="menu-icon">🐟</div></div>
+<h3>Grilled Fish</h3>
+<div class="menu-desc">Fresh grilled fish.</div>
+<div class="price">Rs. 1,400</div>
+<a class="order-btn" href="https://wa.me/923104056602?text=I%20want%20to%20order%20Grilled%20Fish." target="_blank">Order on WhatsApp</a>
 </div>
 
 </div>
 
+</div>
 </section>
 
 
-<!-- CTA -->
+<!-- SPECIAL SECTION -->
 
-<section class="section">
+<section class="special">
 
-<div class="cta">
+<div class="container">
 
-<h2>Hungry? Let's Fix That.</h2>
+<div class="section-head">
+<div>
+<div class="section-label">Customer Favourites</div>
+<h2 class="section-title">Something special tonight?</h2>
+</div>
+</div>
+
+<div class="special-grid">
+
+<div class="special-main">
+
+<div class="badge">🔥 MUST TRY</div>
+
+<h3>Lucky Special Pizza</h3>
 
 <p>
-Send us a WhatsApp message for today's menu,
-prices, availability and orders.
+Loaded with flavour and prepared fresh for your craving.
+Choose your preferred size and order directly through WhatsApp.
 </p>
 
-<a
-class="btn btn-red"
-href="https://wa.me/923104056602?text=Hello%20New%20Lucky%20Foods%2C%20please%20share%20today%27s%20menu%20and%20prices."
+<br>
+
+<a class="btn btn-red"
+href="https://wa.me/923104056602?text=I%20want%20to%20order%20Lucky%20Special%20Pizza."
 target="_blank">
-💬 WhatsApp New Lucky Foods
+Order This
 </a>
 
 </div>
 
+<div class="special-list">
+
+<div class="special-item">
+<div>
+<h4>🌯 Chicken Shawarma</h4>
+<p>Fresh & filling</p>
+</div>
+<div class="special-price">Rs. 300</div>
+</div>
+
+<div class="special-item">
+<div>
+<h4>🍔 Zinger Burger</h4>
+<p>Crispy chicken</p>
+</div>
+<div class="special-price">Rs. 330</div>
+</div>
+
+<div class="special-item">
+<div>
+<h4>🍟 Loaded Fries</h4>
+<p>Half / Full</p>
+</div>
+<div class="special-price">Rs. 400+</div>
+</div>
+
+<div class="special-item">
+<div>
+<h4>🍝 Creamy Pasta</h4>
+<p>Half / Full</p>
+</div>
+<div class="special-price">Rs. 450+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container about">
+
+<div>
+<div class="section-label">About New Lucky Foods</div>
+
+<h2 class="section-title">
+Your local spot for big cravings.
+</h2>
+
+<p class="section-text" style="margin-top:20px;">
+New Lucky Foods serves a wide variety of fast food favourites
+in Daroghawala, Lahore — from pizzas and burgers to shawarma,
+wraps, sandwiches, fries and pasta.
+</p>
+
+<div class="about-points">
+
+<div class="point">✓ Freshly prepared food</div>
+<div class="point">✓ Wide variety of fast food</div>
+<div class="point">✓ Delivery & takeaway available</div>
+<div class="point">✓ Open late for your cravings</div>
+
+</div>
+</div>
+
+<div class="about-box">
+
+<h3>Hungry already? 😋</h3>
+
+<p>
+Don't spend time searching. Browse the menu, choose your favourite
+and send your order directly through WhatsApp.
+</p>
+
+<a class="btn btn-red"
+href="https://wa.me/923104056602?text=Assalam-o-Alaikum%2C%20I%20want%20to%20place%20an%20order."
+target="_blank">
+💬 Start Your Order
+</a>
+
+</div>
+
+</div>
 </section>
 
 
 <!-- CONTACT -->
 
-<section class="section" id="contact">
+<section class="contact" id="contact">
 
-<div class="heading">
+<div class="container">
 
-<small>Find Us</small>
-
-<h2>Visit New Lucky Foods</h2>
-
-<p>
-We're available daily for dine-in, takeaway
-and delivery.
-</p>
-
+<div class="section-head">
+<div>
+<div class="section-label">Contact & Location</div>
+<h2 class="section-title">Come hungry. Leave happy.</h2>
+</div>
 </div>
 
-
-<div class="contact">
+<div class="contact-grid">
 
 <div class="contact-card">
 
-<h3>Contact Information</h3>
-
-
 <div class="contact-row">
-
 <div class="contact-icon">📍</div>
-
 <div>
-
-<strong>ADDRESS</strong>
-
-<span>
-Indo Pak Gas Factory, near Gourmet Bakers,
-Lahore, Punjab, Pakistan
-</span>
-
+<small>Location</small>
+<strong>Indo Pak Gas Factory, Near Gourmet Bakers, Daroghawala, Lahore</strong>
 </div>
-
 </div>
-
 
 <div class="contact-row">
-
 <div class="contact-icon">📞</div>
-
 <div>
+<small>Phone / WhatsApp</small>
+<strong>0310-4056602</strong>
+</div>
+</div>
 
-<strong>PHONE / WHATSAPP</strong>
+<div class="contact-row">
+<div class="contact-icon">🕓</div>
+<div>
+<small>Opening Hours</small>
+<strong>Daily · 4:00 PM – 3:00 AM</strong>
+</div>
+</div>
 
-<a
-href="https://wa.me/923104056602"
+<a class="btn btn-red"
+style="width:100%;"
+href="https://wa.me/923104056602?text=Assalam-o-Alaikum%20New%20Lucky%20Foods."
 target="_blank">
-+92 310 4056602
+💬 Contact on WhatsApp
 </a>
 
 </div>
 
-</div>
 
-
-<div class="contact-row">
-
-<div class="contact-icon">🕓</div>
+<div class="map-box">
 
 <div>
 
-<strong>OPENING HOURS</strong>
-
-<span>
-Daily — 4:00 PM to 3:00 AM
-</span>
-
-</div>
-
-</div>
-
-
-<div class="contact-row">
-
-<div class="contact-icon">🛵</div>
-
-<div>
-
-<strong>SERVICE</strong>
-
-<span>
-Delivery • Takeaway
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="map-card">
-
-<div>
-
-<div class="map-pin">📍</div>
+<div style="font-size:45px;">📍</div>
 
 <h3>New Lucky Foods</h3>
 
 <p>
-Indo Pak Gas Factory, near Gourmet Bakers,
-Lahore
+Daroghawala, Lahore
 </p>
 
-<a
-class="btn btn-red"
-href="https://www.google.com/maps/search/?api=1&query=New+Lucky+Foods+Indo+Pak+Gas+Factory+near+Gourmet+Bakers+Lahore"
+<a class="btn btn-outline"
+href="https://www.google.com/maps/search/?api=1&query=New+Lucky+Foods+Daroghawala+Lahore"
 target="_blank">
 Open Google Maps
 </a>
 
 </div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<div class="cta-box">
+
+<div class="badge">ORDER NOW</div>
+
+<h2>What are you craving today?</h2>
+
+<p>
+Pizza, burger, shawarma, wrap, fries or something else?
+Send us a WhatsApp message and place your order.
+</p>
+
+<a class="btn btn-red"
+href="https://wa.me/923104056602?text=Assalam-o-Alaikum%2C%20I%20would%20like%20to%20place%20an%20order."
+target="_blank">
+💬 Order on WhatsApp
+</a>
 
 </div>
 
@@ -1413,57 +1548,86 @@ Open Google Maps
 
 <footer>
 
-<div class="footer-logo">
-NEW <span>LUCKY</span> FOODS
-</div>
-
-<p>
-Pizza • Shawarma • Chicken • Wraps • Fast Food
-</p>
+<div class="container footer-inner">
 
 <p>
 © 2026 New Lucky Foods. All rights reserved.
 </p>
 
+<p>
+Daroghawala, Lahore · 0310-4056602
+</p>
+
+</div>
+
 </footer>
 
 
-<!-- WHATSAPP -->
+<!-- FLOATING WHATSAPP -->
 
-<a
-class="whatsapp"
-href="https://wa.me/923104056602?text=Hello%20New%20Lucky%20Foods%2C%20I%20would%20like%20to%20place%20an%20order."
-target="_blank">
+<a class="whatsapp"
+href="https://wa.me/923104056602?text=Assalam-o-Alaikum%20New%20Lucky%20Foods%2C%20I%20want%20to%20place%20an%20order."
+target="_blank"
+aria-label="WhatsApp">
 💬
 </a>
 
 
 <script>
 
-function filterMenu(category,button){
-
-const cards=document.querySelectorAll(".menu-card");
-const buttons=document.querySelectorAll(".filter");
-
-buttons.forEach(btn=>{
-btn.classList.remove("active");
-});
-
-button.classList.add("active");
-
-cards.forEach(card=>{
-
-if(
-category==="all" ||
-card.dataset.category.includes(category)
-){
-card.style.display="block";
-}else{
-card.style.display="none";
+function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("show");
 }
 
-});
+function filterMenu(category,button){
 
+    const cards=document.querySelectorAll(".menu-card");
+    const buttons=document.querySelectorAll(".category");
+
+    buttons.forEach(btn=>btn.classList.remove("active"));
+    button.classList.add("active");
+
+    cards.forEach(card=>{
+
+        if(category==="all"){
+            card.style.display="flex";
+        }else{
+            card.style.display=
+                card.dataset.category===category
+                ? "flex"
+                : "none";
+        }
+
+    });
+
+    document.getElementById("search").value="";
+}
+
+function searchMenu(){
+
+    const query=document
+        .getElementById("search")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const cards=document.querySelectorAll(".menu-card");
+
+    cards.forEach(card=>{
+
+        const name=card.dataset.name.toLowerCase();
+
+        if(name.includes(query)){
+            card.style.display="flex";
+        }else{
+            card.style.display="none";
+        }
+
+    });
+
+    if(query===""){
+        cards.forEach(card=>card.style.display="flex");
+    }
 }
 
 </script>
