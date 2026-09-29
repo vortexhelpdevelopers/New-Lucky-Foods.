@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>New Lucky Foods | Lahore</title>
+
+<meta name="description"
+content="New Lucky Foods Lahore — Pizza, Shawarma, Chicken, Wraps, Fries and more. Order through WhatsApp.">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+:root{
+  --red:#e3262e;
+  --red-dark:#a70f16;
+  --gold:#ffca55;
+  --black:#080808;
+  --dark:#101010;
+  --card:#171717;
+  --white:#fff;
+  --muted:#a8a8a8;
+  --green:#25d366;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--black);
+  color:white;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button{
+  font-family:inherit;
+}
+
+/* NAVBAR */
+
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:999;
+  background:rgba(7,7,7,.94);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav-inner{
+  max-width:1180px;
+  margin:auto;
+  padding:16px 22px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:900;
+  letter-spacing:.5px;
+}
+
+.logo span{
+  display:block;
+  color:var(--red);
+  font-size:9px;
+  letter-spacing:3px;
+  margin-top:-2px;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:24px;
+  color:#ddd;
+  font-size:14px;
+}
+
+.nav-links a:hover{
+  color:var(--red);
+}
+
+.nav-order{
+  background:var(--red);
+  padding:10px 17px;
+  border-radius:7px;
+  font-weight:bold;
+  color:white!important;
+}
+
+/* HERO */
+
+.hero{
+  min-height:700px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+
+  background:
+  linear-gradient(
+    90deg,
+    rgba(0,0,0,.97) 0%,
+    rgba(0,0,0,.82) 45%,
+    rgba(0,0,0,.45) 100%
+  ),
+  url("https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1800&q=85")
+  center/cover;
+}
+
+.hero-content{
+  max-width:1180px;
+  width:100%;
+  margin:auto;
+  padding:80px 22px;
+}
+
+.badge{
+  display:inline-block;
+  color:var(--gold);
+  border:1px solid rgba(255,202,85,.4);
+  background:rgba(255,202,85,.08);
+  padding:8px 14px;
+  border-radius:30px;
+  font-size:11px;
+  font-weight:bold;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:22px;
+}
+
+.hero h1{
+  max-width:750px;
+  font-size:clamp(50px,7vw,88px);
+  line-height:.98;
+  margin-bottom:24px;
+  font-weight:900;
+  letter-spacing:-3px;
+}
+
+.hero h1 span{
+  color:var(--red);
+}
+
+.hero p{
+  max-width:620px;
+  color:#d0d0d0;
+  font-size:18px;
+  margin-bottom:30px;
+}
+
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 21px;
+  border-radius:7px;
+  font-size:14px;
+  font-weight:bold;
+  transition:.25s;
+}
+
+.btn-red{
+  background:var(--red);
+  color:white;
+}
+
+.btn-red:hover{
+  background:#ff343d;
+  transform:translateY(-2px);
+}
+
+.btn-outline{
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.04);
+}
+
+.btn-outline:hover{
+  border-color:var(--red);
+  color:#ff555c;
+}
+
+/* INFO */
+
+.info{
+  max-width:1120px;
+  margin:-45px auto 0;
+  position:relative;
+  z-index:5;
+  padding:0 20px;
+}
+
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  background:#151515;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:14px;
+  overflow:hidden;
+}
+
+.info-box{
+  padding:24px;
+  text-align:center;
+  border-right:1px solid rgba(255,255,255,.08);
+}
+
+.info-box:last-child{
+  border-right:none;
+}
+
+.info-box strong{
+  display:block;
+  color:var(--gold);
+  font-size:13px;
+  margin-bottom:4px;
+}
+
+.info-box span{
+  color:#aaa;
+  font-size:12px;
+}
+
+/* GENERAL */
+
+.section{
+  max-width:1180px;
+  margin:auto;
+  padding:100px 22px;
+}
+
+.heading{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.heading small{
+  color:var(--red);
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:11px;
+  font-weight:bold;
+}
+
+.heading h2{
+  font-size:clamp(36px,5vw,56px);
+  margin:8px 0 12px;
+}
+
+.heading p{
+  max-width:650px;
+  margin:auto;
+  color:#999;
+  font-size:15px;
+}
+
+/* ABOUT */
+
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.about-image{
+  min-height:450px;
+  border-radius:16px;
+
+  background:
+  linear-gradient(180deg,transparent,rgba(0,0,0,.75)),
+  url("https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=1000&q=85")
+  center/cover;
+}
+
+.about-content h2{
+  font-size:38px;
+  margin-bottom:18px;
+}
+
+.about-content p{
+  color:#aaa;
+  margin-bottom:16px;
+}
+
+.features{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:25px;
+}
+
+.feature{
+  background:#151515;
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:9px;
+  padding:14px;
+  font-size:13px;
+  color:#ddd;
+}
+
+.feature span{
+  color:var(--red);
+  margin-right:6px;
+}
+
+/* MENU */
+
+.menu-section{
+  background:#0e0e0e;
+  border-top:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.filters{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-bottom:35px;
+}
+
+.filter{
+  background:#181818;
+  color:#ccc;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:30px;
+  padding:10px 17px;
+  cursor:pointer;
+}
+
+.filter:hover,
+.filter.active{
+  background:var(--red);
+  color:white;
+  border-color:var(--red);
+}
+
+.menu-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:17px;
+}
+
+.menu-card{
+  background:linear-gradient(145deg,#191919,#111);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:13px;
+  padding:22px;
+  transition:.25s;
+}
+
+.menu-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(227,38,46,.45);
+}
+
+.menu-icon{
+  width:45px;
+  height:45px;
+  display:grid;
+  place-items:center;
+  border-radius:10px;
+  background:rgba(227,38,46,.12);
+  font-size:22px;
+  margin-bottom:15px;
+}
+
+.menu-card h3{
+  font-size:21px;
+  margin-bottom:7px;
+}
+
+.menu-card p{
+  color:#999;
+  font-size:13px;
+  margin-bottom:18px;
+}
+
+.menu-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+
+.ask{
+  color:var(--gold);
+  font-size:12px;
+  font-weight:bold;
+}
+
+.order-small{
+  background:rgba(227,38,46,.12);
+  border:1px solid rgba(227,38,46,.4);
+  padding:7px 11px;
+  border-radius:6px;
+  font-size:10px;
+  font-weight:bold;
+}
+
+.order-small:hover{
+  background:var(--red);
+}
+
+/* DEALS */
+
+.deals{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.deal{
+  background:
+  linear-gradient(135deg,rgba(227,38,46,.22),rgba(227,38,46,.02)),
+  #151515;
+  border:1px solid rgba(227,38,46,.28);
+  border-radius:14px;
+  padding:28px;
+}
+
+.deal-icon{
+  font-size:35px;
+  margin-bottom:12px;
+}
+
+.deal h3{
+  font-size:24px;
+  margin-bottom:8px;
+}
+
+.deal p{
+  color:#999;
+  font-size:13px;
+}
+
+/* ORDER CTA */
+
+.cta{
+  max-width:1120px;
+  margin:auto;
+  padding:65px 25px;
+  border-radius:18px;
+  text-align:center;
+
+  background:
+  linear-gradient(135deg,rgba(227,38,46,.23),rgba(227,38,46,.03)),
+  #151515;
+
+  border:1px solid rgba(227,38,46,.3);
+}
+
+.cta h2{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.cta p{
+  color:#999;
+  max-width:580px;
+  margin:0 auto 25px;
+}
+
+/* CONTACT */
+
+.contact{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.contact-card,
+.map-card{
+  background:#151515;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:14px;
+  padding:28px;
+}
+
+.contact-card h3,
+.map-card h3{
+  font-size:27px;
+  margin-bottom:20px;
+}
+
+.contact-row{
+  display:flex;
+  gap:14px;
+  padding:16px 0;
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+
+.contact-row:last-child{
+  border-bottom:none;
+}
+
+.contact-icon{
+  width:42px;
+  height:42px;
+  flex-shrink:0;
+  display:grid;
+  place-items:center;
+  background:rgba(227,38,46,.13);
+  border-radius:8px;
+}
+
+.contact-row strong{
+  display:block;
+  color:var(--gold);
+  font-size:11px;
+}
+
+.contact-row span,
+.contact-row a{
+  color:#bbb;
+  font-size:14px;
+}
+
+.map-card{
+  min-height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.map-pin{
+  font-size:50px;
+  margin-bottom:12px;
+}
+
+.map-card p{
+  color:#999;
+  max-width:400px;
+  margin:0 auto 20px;
+}
+
+/* FOOTER */
+
+footer{
+  background:#060606;
+  border-top:1px solid rgba(255,255,255,.07);
+  text-align:center;
+  padding:38px 20px;
+}
+
+.footer-logo{
+  font-size:23px;
+  font-weight:900;
+}
+
+.footer-logo span{
+  color:var(--red);
+}
+
+footer p{
+  color:#666;
+  font-size:12px;
+  margin-top:7px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:999;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:var(--green);
+  display:grid;
+  place-items:center;
+  font-size:27px;
+  box-shadow:0 8px 25px rgba(0,0,0,.45);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .about,
+  .contact{
+    grid-template-columns:1fr;
+  }
+
+  .menu-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .deals{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:600px){
+
+  .hero{
+    min-height:630px;
+  }
+
+  .hero h1{
+    font-size:52px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .buttons{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .info-grid{
+    grid-template-columns:1fr;
+  }
+
+  .info-box{
+    border-right:none;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+
+  .info-box:last-child{
+    border-bottom:none;
+  }
+
+  .section{
+    padding:72px 18px;
+  }
+
+  .about-image{
+    min-height:320px;
+  }
+
+  .features{
+    grid-template-columns:1fr;
+  }
+
+  .menu-grid{
+    grid-template-columns:1fr;
+  }
+
+  .cta{
+    margin:0 18px;
+    padding:50px 20px;
+  }
+
+  .cta h2{
+    font-size:32px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+<div class="nav-inner">
+
+<a href="#home" class="logo">
+NEW LUCKY FOODS
+<span>LAHORE • PAKISTAN</span>
+</a>
+
+<nav class="nav-links">
+
+<a href="#about">About</a>
+<a href="#menu">Menu</a>
+<a href="#deals">Specials</a>
+<a href="#contact">Contact</a>
+
+<a
+class="nav-order"
+href="https://wa.me/923104056602?text=Hello%20New%20Lucky%20Foods%2C%20I%20would%20like%20to%20place%20an%20order."
+target="_blank">
+Order Now
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="badge">
+🍕 Fast Food • Pizza • Shawarma
+</div>
+
+<h1>
+Good Food.
+<span>Good Mood.</span>
+</h1>
+
+<p>
+From loaded shawarma and chicken wraps to pizza,
+fries and other fast-food favorites — enjoy your
+favorite comfort food at New Lucky Foods.
+</p>
+
+<div class="buttons">
+
+<a
+class="btn btn-red"
+href="https://wa.me/923104056602?text=Hello%20New%20Lucky%20Foods%2C%20I%20would%20like%20to%20place%20an%20order."
+target="_blank">
+💬 Order on WhatsApp
+</a>
+
+<a
+class="btn btn-outline"
+href="#menu">
+Explore Menu
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- INFO -->
+
+<div class="info">
+
+<div class="info-grid">
+
+<div class="info-box">
+
+<strong>📍 LOCATION</strong>
+
+<span>
+Indo Pak Gas Factory, near Gourmet Bakers, Lahore
+</span>
+
+</div>
+
+<div class="info-box">
+
+<strong>🕓 OPEN DAILY</strong>
+
+<span>
+4:00 PM — 3:00 AM
+</span>
+
+</div>
+
+<div class="info-box">
+
+<strong>📞 WHATSAPP</strong>
+
+<span>
+0310-4056602
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+<div class="about">
+
+<div class="about-image"></div>
+
+<div class="about-content">
+
+<div class="heading" style="text-align:left;margin-bottom:20px;">
+
+<small>ABOUT US</small>
+
+<h2>Fresh Food. Fast Service.</h2>
+
+</div>
+
+<p>
+New Lucky Foods brings together popular fast-food
+favorites in one place — from shawarma and chicken
+wraps to pizza, fries and more.
+</p>
+
+<p>
+Whether you're grabbing a quick meal or ordering
+food for friends and family, we're here to serve
+fresh and satisfying food.
+</p>
+
+<div class="features">
+
+<div class="feature">
+<span>✓</span> Fresh Fast Food
+</div>
+
+<div class="feature">
+<span>✓</span> Shawarma & Wraps
+</div>
+
+<div class="feature">
+<span>✓</span> Pizza
+</div>
+
+<div class="feature">
+<span>✓</span> Delivery Available
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MENU -->
+
+<section class="menu-section" id="menu">
+
+<div class="section">
+
+<div class="heading">
+
+<small>Our Food</small>
+
+<h2>Explore Our Menu</h2>
+
+<p>
+Browse some of the food categories available at
+New Lucky Foods. For the latest prices and
+availability, contact us directly on WhatsApp.
+</p>
+
+</div>
+
+
+<div class="filters">
+
+<button class="filter active"
+onclick="filterMenu('all',this)">
+All
+</button>
+
+<button class="filter"
+onclick="filterMenu('shawarma',this)">
+Shawarma
+</button>
+
+<button class="filter"
+onclick="filterMenu('chicken',this)">
+Chicken
+</button>
+
+<button class="filter"
+onclick="filterMenu('wraps',this)">
+Wraps
+</button>
+
+<button class="filter"
+onclick="filterMenu('pizza',this)">
+Pizza
+</button>
+
+<button class="filter"
+onclick="filterMenu('sides',this)">
+Sides
+</button>
+
+</div>
+
+
+<div class="menu-grid">
+
+
+<!-- SHAWARMA -->
+
+<div class="menu-card" data-category="shawarma">
+
+<div class="menu-icon">🌯</div>
+
+<h3>Chicken Shawarma</h3>
+
+<p>
+One of the popular choices mentioned by customers.
+</p>
+
+<div class="menu-bottom">
+
+<span class="ask">
+Price on WhatsApp
+</span>
+
+<a
+class="order-small"
+href="https://wa.me/923104056602?text=Hello%2C%20I%20would%20like%20to%20order%20Chicken%20Shawarma."
+target="_blank">
+ORDER
+</a>
+
+</div>
+
+</div>
+
+
+<!-- WRAP -->
+
+<div class="menu-card" data-category="wraps chicken">
+
+<div class="menu-icon">🌯</div>
+
+<h3>Chicken Wrap</h3>
+
+<p>
+Tender chicken served in a convenient wrap.
+</p>
+
+<div class="menu-bottom">
+
+<span class="ask">
+Price on WhatsApp
+</span>
+
+<a
+class="order-small"
+href="https://wa.me/923104056602?text=Hello%2C%20I%20would%20like%20to%20order%20a%20Chicken%20Wrap."
+target="_blank">
+ORDER
+</a>
+
+</div>
+
+</div>
+
+
+<!-- CHICKEN -->
+
+<div class="menu-card" data-category="chicken">
+
+<div class="menu-icon">🍗</div>
+
+<h3>Chicken</h3>
+
+<p>
+A selection of chicken-based fast-food favorites.
+</p>
+
+<div class="menu-bottom">
+
+<span class="ask">
+Price on WhatsApp
+</span>
+
+<a
+class="order-small"
+href="https://wa.me/923104056602?text=Hello%2C%20please%20share%20your%20current%20Chicken%20menu."
+target="_blank">
+VIEW
+</a>
+
+</div>
+
+</div>
+
+
+<!-- FRIES -->
+
+<div class="menu-card" data-category="sides">
+
+<div class="menu-icon">🍟</div>
+
+<h3>French Fries</h3>
+
+<p>
+Crispy fries — perfect with your meal.
+</p>
+
+<div class="menu-bottom">
+
+<span class="ask">
+Price on WhatsApp
+</span>
+
+<a
+class="order-small"
+href="https://wa.me/923104056602?text=Hello%2C%20I%20would%20like%20to%20order%20French%20Fries."
+target="_blank">
+ORDER
+</a>
+
+</div>
+
+</div>
+
+
+<!-- PIZZA -->
+
+<div class="menu-card" data-category="pizza">
+
+<div class="menu-icon">🍕</div>
+
+<h3>Pizza</h3>
+
+<p>
+Pizza options available at New Lucky Foods.
+</p>
+
+<div class="menu-bottom">
+
+<span class="ask">
+Price on WhatsApp
+</span>
+
+<a
+class="order-small"
+href="https://wa.me/923104056602?text=Hello%2C%20please%20share%20your%20current%20Pizza%20menu%20and%20prices."
+target="_blank">
+VIEW
+</a>
+
+</div>
+
+</div>
+
+
+<!-- CHICKEN WRAP -->
+
+<div class="menu-card" data-category="wraps chicken">
+
+<div class="menu-icon">🌯</div>
+
+<h3>Chicken Roll / Wrap</h3>
+
+<p>
+Chicken wrapped with flavorful fillings.
+</p>
+
+<div class="menu-bottom">
+
+<span class="ask">
+Price on WhatsApp
+</span>
+
+<a
+class="order-small"
+href="https://wa.me/923104056602?text=Hello%2C%20please%20share%20your%20Chicken%20Wrap%20options."
+target="_blank">
+VIEW
+</a>
+
+</div>
+
+</div>
+
+
+<!-- SHAWARMA PLATTER -->
+
+<div class="menu-card" data-category="shawarma">
+
+<div class="menu-icon">🥙</div>
+
+<h3>Shawarma Meal</h3>
+
+<p>
+Ask about available shawarma meal combinations.
+</p>
+
+<div class="menu-bottom">
+
+<span class="ask">
+Price on WhatsApp
+</span>
+
+<a
+class="order-small"
+href="https://wa.me/923104056602?text=Hello%2C%20please%20share%20your%20Shawarma%20meal%20options."
+target="_blank">
+VIEW
+</a>
+
+</div>
+
+</div>
+
+
+<!-- FAST FOOD -->
+
+<div class="menu-card" data-category="sides chicken">
+
+<div class="menu-icon">🍗</div>
+
+<h3>Fast Food Specials</h3>
+
+<p>
+Ask about today's available fast-food specials.
+</p>
+
+<div class="menu-bottom">
+
+<span class="ask">
+Price on WhatsApp
+</span>
+
+<a
+class="order-small"
+href="https://wa.me/923104056602?text=Hello%2C%20please%20share%20today%27s%20Fast%20Food%20specials."
+target="_blank">
+ASK
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SPECIALS -->
+
+<section class="section" id="deals">
+
+<div class="heading">
+
+<small>Why New Lucky Foods?</small>
+
+<h2>Made For Every Craving</h2>
+
+<p>
+Whether you're craving something quick, something
+crispy or a proper meal — explore the options
+available at New Lucky Foods.
+</p>
+
+</div>
+
+
+<div class="deals">
+
+<div class="deal">
+
+<div class="deal-icon">🌯</div>
+
+<h3>Shawarma</h3>
+
+<p>
+Chicken shawarma is one of the foods frequently
+mentioned by customers in public reviews.
+</p>
+
+<br>
+
+<a
+class="btn btn-red"
+href="https://wa.me/923104056602?text=Hello%2C%20please%20send%20me%20your%20Shawarma%20menu."
+target="_blank">
+View Shawarma
+</a>
+
+</div>
+
+
+<div class="deal">
+
+<div class="deal-icon">🍕</div>
+
+<h3>Pizza</h3>
+
+<p>
+Pizza is also listed among the restaurant's food
+categories in current public listings.
+</p>
+
+<br>
+
+<a
+class="btn btn-red"
+href="https://wa.me/923104056602?text=Hello%2C%20please%20send%20me%20your%20Pizza%20menu."
+target="_blank">
+View Pizza
+</a>
+
+</div>
+
+
+<div class="deal">
+
+<div class="deal-icon">🍗</div>
+
+<h3>Chicken & Wraps</h3>
+
+<p>
+Enjoy chicken-based options, wraps and other
+fast-food favorites.
+</p>
+
+<br>
+
+<a
+class="btn btn-red"
+href="https://wa.me/923104056602?text=Hello%2C%20please%20send%20me%20your%20Chicken%20and%20Wrap%20menu."
+target="_blank">
+View Options
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="section">
+
+<div class="cta">
+
+<h2>Hungry? Let's Fix That.</h2>
+
+<p>
+Send us a WhatsApp message for today's menu,
+prices, availability and orders.
+</p>
+
+<a
+class="btn btn-red"
+href="https://wa.me/923104056602?text=Hello%20New%20Lucky%20Foods%2C%20please%20share%20today%27s%20menu%20and%20prices."
+target="_blank">
+💬 WhatsApp New Lucky Foods
+</a>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="section" id="contact">
+
+<div class="heading">
+
+<small>Find Us</small>
+
+<h2>Visit New Lucky Foods</h2>
+
+<p>
+We're available daily for dine-in, takeaway
+and delivery.
+</p>
+
+</div>
+
+
+<div class="contact">
+
+<div class="contact-card">
+
+<h3>Contact Information</h3>
+
+
+<div class="contact-row">
+
+<div class="contact-icon">📍</div>
+
+<div>
+
+<strong>ADDRESS</strong>
+
+<span>
+Indo Pak Gas Factory, near Gourmet Bakers,
+Lahore, Punjab, Pakistan
+</span>
+
+</div>
+
+</div>
+
+
+<div class="contact-row">
+
+<div class="contact-icon">📞</div>
+
+<div>
+
+<strong>PHONE / WHATSAPP</strong>
+
+<a
+href="https://wa.me/923104056602"
+target="_blank">
++92 310 4056602
+</a>
+
+</div>
+
+</div>
+
+
+<div class="contact-row">
+
+<div class="contact-icon">🕓</div>
+
+<div>
+
+<strong>OPENING HOURS</strong>
+
+<span>
+Daily — 4:00 PM to 3:00 AM
+</span>
+
+</div>
+
+</div>
+
+
+<div class="contact-row">
+
+<div class="contact-icon">🛵</div>
+
+<div>
+
+<strong>SERVICE</strong>
+
+<span>
+Delivery • Takeaway
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="map-card">
+
+<div>
+
+<div class="map-pin">📍</div>
+
+<h3>New Lucky Foods</h3>
+
+<p>
+Indo Pak Gas Factory, near Gourmet Bakers,
+Lahore
+</p>
+
+<a
+class="btn btn-red"
+href="https://www.google.com/maps/search/?api=1&query=New+Lucky+Foods+Indo+Pak+Gas+Factory+near+Gourmet+Bakers+Lahore"
+target="_blank">
+Open Google Maps
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-logo">
+NEW <span>LUCKY</span> FOODS
+</div>
+
+<p>
+Pizza • Shawarma • Chicken • Wraps • Fast Food
+</p>
+
+<p>
+© 2026 New Lucky Foods. All rights reserved.
+</p>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+class="whatsapp"
+href="https://wa.me/923104056602?text=Hello%20New%20Lucky%20Foods%2C%20I%20would%20like%20to%20place%20an%20order."
+target="_blank">
+💬
+</a>
+
+
+<script>
+
+function filterMenu(category,button){
+
+const cards=document.querySelectorAll(".menu-card");
+const buttons=document.querySelectorAll(".filter");
+
+buttons.forEach(btn=>{
+btn.classList.remove("active");
+});
+
+button.classList.add("active");
+
+cards.forEach(card=>{
+
+if(
+category==="all" ||
+card.dataset.category.includes(category)
+){
+card.style.display="block";
+}else{
+card.style.display="none";
+}
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
